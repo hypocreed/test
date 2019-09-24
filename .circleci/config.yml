@@ -1,14 +1,10 @@
-# Javascript Node CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-javascript/ for more details
-#
 version: 2.1
 orbs:
   sonarcloud: sonarsource/sonarcloud@dev:alpha
 jobs:
   build:
     docker:
-      - image: 'node:latest'
+      - image: 'circleci/python:3.7.4'
     steps:
     - checkout
     - sonarcloud/scan
@@ -17,3 +13,4 @@ workflows:
   my-workflow:
     jobs:
       - build:
+          context: sonarsource
