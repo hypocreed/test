@@ -3,13 +3,13 @@
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
 version: 2.1
-  orbs:
-    sonarcloud: sonarsource/sonarcloud@dev:alpha
-  jobs:
-    build:
-      docker:
-        - image: 'circleci/python:3.7.4'
-      context: sonarcloud
-      steps:
-        - checkout
-        - sonarcloud/scan
+orbs:
+  sonarcloud: sonarsource/sonarcloud@dev:alpha
+jobs:
+  build:
+    docker:
+      - image: 'circleci/python:3.7.4'
+    context: sonarcloud
+    steps:
+      - checkout
+      - sonarcloud/scan
