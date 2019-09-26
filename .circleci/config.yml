@@ -1,16 +1,16 @@
-version: 2.1
-orbs:
-  sonarcloud: sonarsource/sonarcloud@dev:alpha
+version: 2
 jobs:
   build:
     docker:
-      - image: 'circleci/python:3.7.4'
+      - image: circleci/openjdk:8-jdk-node-browsers
     steps:
-    - checkout
-    - sonarcloud/scan
-workflows:
-  version: 2.1
-  my-workflow:
-    jobs:
-      - build:
-          context: sonarsource
+      - checkout
+      - run:
+          name: Greeting
+          command: echo Hello, world.
+      - run:
+          name: Print master
+          command: git log master
+      - run:
+          name: Print master
+          command: git log origin/master
