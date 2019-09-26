@@ -10,7 +10,4 @@ jobs:
           command: echo Hello, world.
       - run:
           name: Print master
-          command: git log master
-      - run:
-          name: Print master
           command: git log origin/master
