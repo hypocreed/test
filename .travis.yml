@@ -3,7 +3,8 @@ dist: trusty
 addons:
   sonarcloud:
     organization: "benoit-sns-test"
-    token: ${SONAR_TOKEN}
+    token: 
+      secure: "${SONAR_TOKEN}"
 
 script:
   # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
