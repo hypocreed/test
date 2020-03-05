@@ -4,7 +4,7 @@ addons:
   sonarcloud:
     organization: "benoit-sns-test"
     token: 
-      secure: "RoWW5Kr3AwROn7ZG2VlATBv2bmpONY7QgR2vCnOt0Ut1UTlioCI+sPVWnGeQLUUxjbTc6iHprpXkYpX7WlsxoYJ16SEsvVJNqJVO7gOw9fhY4BPYICMZa63HEcryuwuuhQKPq1WZ9YBcr4Mt49gA44SLFrZbIZ97lVmsoOMZid+QVTPfUiOraBEkBU+d3H/WEY7btCgoI+bKrQTDhVH4B1VkhKhu5TKcW93uiKXQMVqI1uh/oKxKrtgXNMcJttxD6RW23LdT5JmNExHF53dMjFpPH3/y9rpSvJzBFFsO50xS2bC+WR89IraG4q9tWBuNSJ5Kah6FNh1xUzdyVCO+BduOePA8U+opYSSCFgkNzApWzEntQx+iYCkqzI647/2hbg//T8TweQrspk1DzgIT+lyR+vo0sKJr8NtryzP3DaKh4orF9B4oQ4n0HLsDWbJPAlVKcikBjIj7bhQfURpiu1tOZH1KX2jaFbkA92WKg0EkNOf2REZs4AfjX0iJZjPslLuy4QmjePG9F44a7cpfaW5Ezqa68q4dxV4fNKv6+n0k9aJOT9Q31vaOjigIT1hc4cK15Ay7QYY5iraG2WNiVstuLOId0jiBnmVYCK+qUdg5+xvBErs20fTrlvkSFDDqEtkdWrMmdza0mmteoAxv2eIa6v3dGpTVNnMBC/lbaDg="
+      secure: ${SONAR_TOKEN}
 
 script:
   # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
